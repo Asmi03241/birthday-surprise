@@ -170,7 +170,7 @@ function showPreviewVideo() {
     <div class="screen preview-screen">
 
       <!-- TOP NOTE -->
-      <div id="waitNote" class="preview-note-top">
+      <div class="preview-note-top">
         wait till the song ends 👀💖
       </div>
 
@@ -215,30 +215,27 @@ function showPreviewVideo() {
   });
 
   /* ======================
-     LYRIC VISIBILITY (SEEK SAFE)
+     LYRIC AT 20 SECONDS (FIXED)
   ====================== */
-  video.addEventListener("timeupdate", () => {
-  if (video.currentTime >= 23) {
-    lyric.style.opacity = "1";
-  } else {
-    lyric.style.opacity = "0";
-  }
-});
+  video.addEventListener("canplay", () => {
+    const lyricTimer = setInterval(() => {
+      if (video.currentTime >= 20) {
+        lyric.style.opacity = "1";
+        clearInterval(lyricTimer);
+      }
+    }, 200);
+  });
 
   /* ======================
-     SMOOTH FADE AT END (NO CUT)
+     SMOOTH FADE AT END
   ====================== */
   video.addEventListener("ended", () => {
-    // fade visuals immediately
     screen.classList.add("preview-fade-out");
-
-    // fade music together
     fadeOutMusic(previewMusic);
 
-    // go to envelope after fade
     setTimeout(() => {
       showCanvaEnvelope();
-    }, 1600); // must match CSS animation
+    }, 1600); // must match CSS fade duration
   });
 }
 
@@ -288,25 +285,27 @@ myyy handsome husband 💖
 
 Mera pyarraa bachha… you are my family 🏡  
 You are my safe place, my happiness, my comfort, my everything.  
+</p>
 
+  <!-- PARAGRAPH 2 -->
+        <p class="letter-line">
 Every moment with you feels magical.  
 Your smile lights up my world,  
 your presence makes everything better ✨
-the time i get to spend with you is the most precious one!the one where i laugh the most,
+the time i get to spend with you is the most precious one! the one where i laugh the most,
 the one where world feels calm and life seems to be easy!
 All the memories we share and going to share in the future are always going to be the bestt!
 all the kisses, hugss and everything is just soooo beautifull
 I can't wait to marry youuuu!hehee 🤭
 yeyyeeeyeyeeeyeyyeeeeeee!!!!💗
-        </p>
-
-        <!-- PARAGRAPH 2 -->
-        <p class="letter-line">
 Today, all I wish for is your happiness, success, and good health.  
 May everything you dream about come true,  
 and may you achieve the best in everything you do —  
 because you truly are the bestestttt!! 🥹✨  
+</p>
 
+        <!-- PARAGRAPH 3 -->
+        <p class="letter-line">
 Always keep smiling and loving me (hehee 🤭),  
 because you look the prettiest when you smile 😊  
 
@@ -314,10 +313,6 @@ I am so proud of the person you are becoming,
 and so grateful that I get to walk beside you  
 through every dream, every laugh, every memory 🥹💗
 
-        </p>
-
-        <!-- PARAGRAPH 3 -->
-        <p class="letter-line">
 No matter where life takes us,  
 just know that I'll always be there for youu!  
 

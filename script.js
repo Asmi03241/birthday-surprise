@@ -294,8 +294,8 @@ Your smile lights up my world,
 your presence makes everything better ✨
 the time i get to spend with you is the most precious one! the one where i laugh the most,
 the one where world feels calm and life seems to be easy!
-All the memories we share and going to share in the future are always going to be the bestt!
-all the kisses, hugss and everything is just soooo beautifull
+All the memories we share, the kisses, hugss, chai vadpav & biryanii and what not
+literally everything we have together is just soooo beautifull
 I can't wait to marry youuuu!hehee 🤭
 yeyyeeeyeyeeeyeyyeeeeeee!!!!💗
 Today, all I wish for is your happiness, success, and good health.  

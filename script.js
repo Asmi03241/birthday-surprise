@@ -218,8 +218,12 @@ function showPreviewVideo() {
      LYRIC VISIBILITY (SEEK SAFE)
   ====================== */
   video.addEventListener("timeupdate", () => {
-    lyric.style.opacity = video.currentTime >= 55 ? "1" : "0";
-  });
+  if (video.currentTime >= 23) {
+    lyric.style.opacity = "1";
+  } else {
+    lyric.style.opacity = "0";
+  }
+});
 
   /* ======================
      SMOOTH FADE AT END (NO CUT)
@@ -288,6 +292,12 @@ You are my safe place, my happiness, my comfort, my everything.
 Every moment with you feels magical.  
 Your smile lights up my world,  
 your presence makes everything better ✨
+the time i get to spend with you is the most precious one!the one where i laugh the most,
+the one where world feels calm and life seems to be easy!
+All the memories we share and going to share in the future are always going to be the bestt!
+all the kisses, hugss and everything is just soooo beautifull
+I can't wait to marry youuuu!hehee 🤭
+yeyyeeeyeyeeeyeyyeeeeeee!!!!💗
         </p>
 
         <!-- PARAGRAPH 2 -->
@@ -303,6 +313,7 @@ because you look the prettiest when you smile 😊
 I am so proud of the person you are becoming,  
 and so grateful that I get to walk beside you  
 through every dream, every laugh, every memory 🥹💗
+
         </p>
 
         <!-- PARAGRAPH 3 -->
